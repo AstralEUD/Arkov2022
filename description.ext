@@ -19,7 +19,7 @@ class Params
 	//#define WEATHER_DEFAULT  25 
 	//#include "\a3\functions_f\Params\paramWeather.hpp"
 
-	#include "ghst_params.hpp"
+	//#include "ghst_params.hpp"
 
 };
 
