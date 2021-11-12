@@ -1,5 +1,5 @@
 author = "Testify"; // Author
-onLoadName = "[Arkov] EFT + Arma = Arkov"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
+onLoadName = "[Arkov2022] EFT + Arma = Arkov"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
 onLoadMission = "Survive, Kill, Escape"; // Description
 loadScreen = ""; // Preview picture
 overviewText = "Survive, Kill, Escape";
@@ -7,54 +7,21 @@ class Header
 {
   gameType = Coop;
   minPlayers = 1;
-  maxPlayers = 34;
+  maxPlayers = 32;
 };
 
 enableDebugConsole = 1;
-ShowGPS = 1;
+ShowGPS = 0;
 showSquadRadar = 0;
 
 class Params
 {
-	//#define WEATHER_DEFAULT  25 
-	//#include "\a3\functions_f\Params\paramWeather.hpp"
-
-	//#include "ghst_params.hpp"
-
 };
-
-respawn = "BASE";
-respawnDelay = 5;
-respawnOnStart = -1;
-ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
-ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
-ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
-ReviveRequiredItems = 2;                //0: none, 1: medkit, 2: medkit or first aid kit
-ReviveRequiredItemsFakConsumed = 1;     //0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
-ReviveDelay = 6;                        //time needed to revive someone (in secs)
-ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
-ReviveForceRespawnDelay = 5;            //time needed to perform force respawn (in secs)
-ReviveBleedOutDelay = 180;              //unconscious state duration (in secs)
-disabledAI = 1;
-corpseManagerMode = 1; //Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
-corpseLimit = 20; //Max number of bodies which can be available at the same time. When exceeded, start deleting immediately. 
-corpseRemovalMinTime = 120; //Minimal time in seconds a body stays in the scene (can't be removed sooner). 
-corpseRemovalMaxTime = 240; //Maximal time in seconds after which a dead body is removed (can't stay longer) 
-minPlayerDistance = 100; // meters. Default: 0
-wreckManagerMode = 1; //Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
-wreckLimit = 20; //Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately. 
-wreckRemovalMinTime = 120; //Minimal time in seconds a wreck stays in the scene (can't be removed sooner). 
-wreckRemovalMaxTime = 240; //Maximal time in seconds after which a wreck is removed (can't stay longer)
 skipLobby = 1;
-
-class RscTitles
-{
-	#include "ast\hud\RscTitles.hpp"
-};
-// EA2021 (ast)
-#include "ast\arsenal\ast_dialog.hpp"
 
 class cfgFunctions {
 	//functions from EA2021
 	#include "ast\CfgFunctions.hpp"
+	//original functions
+	#include "arkov\CfgFunctions.hpp"
 };
