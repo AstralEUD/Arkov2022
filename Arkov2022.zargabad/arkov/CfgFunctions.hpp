@@ -4,7 +4,8 @@ class arkov
 	class script
 	{
 		file = "arkov";
-		class randomPositionsMaking {};
-		class randomSpawn {};
+		class chest {};
+		class chestInfo {};
+		class chestSave {};
 	};
 };
